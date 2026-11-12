@@ -11,10 +11,10 @@
 | 120–175 | Hard panoptic: stuff + từng thing, tự QC và export | `hard_panoptic.zip` |
 | 175–185 | Nghỉ; ground truth ba tier được phát từ phút 180 theo hướng dẫn lớp | Chưa đưa đáp án vào fork |
 | 185–215 | Sáu checkpoint; người xong sớm có thể chạy scorer ba tier | ZIP trạm đã làm; kết quả tự đánh giá nếu có |
-| 215–235 | Kiểm export, ghi lỗi, hành động sửa và ba ca chưa chắc vào report | `report/individual/MSSV_HoTen.md` |
+| 215–235 | Kiểm export, ghi lỗi, hành động sửa và ba ca chưa chắc vào report | `report/individual/03140_NguyenVietTien.md` |
 | 235–240 | Save lần cuối, kiểm ZIP và report, ghi lỗi cần báo coach | Bài sẵn để push lên fork |
 
-Các mốc là **timebox thực hành**, không phải hạn nộp ngay trong lớp hay lý do bỏ qua Save/QC. Fork repo đề bài được chia sẻ cho lớp, push `report/individual/MSSV_HoTen.md` và các ZIP đã làm lên fork của bạn, rồi nộp **link fork trên [LMS](https://aithucchien.vinuni.edu.vn) trước 12:00 trưa ngày hôm sau buổi lab (UTC+7)**. Nếu không đủ giờ, ghi phần đã hoàn thành và phần còn thiếu trung thực. Day03 chưa giao bonus; xem [rubric](RUBRIC.md).
+Các mốc là **timebox thực hành**, không phải hạn nộp ngay trong lớp hay lý do bỏ qua Save/QC. Fork repo đề bài được chia sẻ cho lớp, push `report/individual/03140_NguyenVietTien.md` và các ZIP đã làm lên fork của bạn, rồi nộp **link fork trên [LMS](https://aithucchien.vinuni.edu.vn) trước 12:00 trưa ngày hôm sau buổi lab (UTC+7)**. Nếu không đủ giờ, ghi phần đã hoàn thành và phần còn thiếu trung thực. Day03 chưa giao bonus; xem [rubric](RUBRIC.md).
 
 ## Easy: semantic — 20 điểm
 
@@ -34,4 +34,4 @@ Mỗi checkpoint là một ảnh và **3 điểm**: `cp1_holes` (lỗ/kính), `c
 
 ## Tự QC rồi nộp
 
-Theo thứ tự: đúng ảnh → đúng loại segmentation → đúng tên lớp → đủ số object/vùng → biên → Save → ZIP đúng format. Một lỗi thực tế và cách sửa phải xuất hiện trong `report/individual/MSSV_HoTen.md`. Trên fork, bật **Actions** một lần; khi upload ZIP vào `submissions/` và Commit, **Day 3 self-check** tự kiểm cấu trúc. Sau khi ground truth ba tier được công bố qua release chính thức, action tự hiện điểm phản hồi **/82** trong Summary; bạn có thể sửa/export/push lại để xem điểm mới. [Hướng dẫn từng nút và cách chạy script trên máy nếu cần](docs/SELF_SCORING.md). [Notebook Colab](notebooks/README.md) vẫn là tùy chọn; action không tự chứng nhận PASS hoặc top 3.
+Theo thứ tự: đúng ảnh → đúng loại segmentation → đúng tên lớp → đủ số object/vùng → biên → Save → ZIP đúng format. Một lỗi thực tế và cách sửa phải xuất hiện trong `report/individual/03140_NguyenVietTien.md`. Trên fork, bật **Actions** một lần; khi upload ZIP vào `submissions/` và Commit, **Day 3 self-check** tự kiểm cấu trúc. Sau khi ground truth ba tier được công bố qua release chính thức, action tự hiện điểm phản hồi **/82** trong Summary; bạn có thể sửa/export/push lại để xem điểm mới. [Hướng dẫn từng nút và cách chạy script trên máy nếu cần](docs/SELF_SCORING.md). [Notebook Colab](notebooks/README.md) vẫn là tùy chọn; action không tự chứng nhận PASS hoặc top 3.

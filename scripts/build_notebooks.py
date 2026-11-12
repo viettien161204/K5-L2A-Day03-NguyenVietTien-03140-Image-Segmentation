@@ -150,10 +150,10 @@ if zip_path.is_file():
         print("ZIP không đọc được. Hãy Save rồi export lại từ CVAT.")
 else: print("Chưa có ZIP:", zip_path.name)
 '''),
-        md("## Câu hỏi tự QC\n\n1. Road và sidewalk được phân theo chức năng hay màu ảnh? 2. Có vùng nhìn thấy mà chưa gán class không? 3. Nét mảnh ở `cp3_thin` đã được xem ở mức zoom lớn chưa? Ghi lỗi và hành động sửa vào `report/individual/MSSV_HoTen.md`."),
+        md("## Câu hỏi tự QC\n\n1. Road và sidewalk được phân theo chức năng hay màu ảnh? 2. Có vùng nhìn thấy mà chưa gán class không? 3. Nét mảnh ở `cp3_thin` đã được xem ở mức zoom lớn chưa? Ghi lỗi và hành động sửa vào `report/individual/03140_NguyenVietTien.md`."),
     ],
     "instance": [
-        md("# 05 · Tự kiểm instance\n\nÁp dụng cho `medium_instance`, `cp1_holes`, `cp2_slice`, `cp5_occlusion`. Save và export **COCO 1.0**. Một object vật lý = một mask. Tự vẽ object Medium đầu trước gợi ý tự động và ghi quy tắc vào `report/individual/MSSV_HoTen.md`; gợi ý không thay quyết định của bạn. COCO `annotation_id` không phải mã object bền vững qua hai lần export.\n\n**Đọc kết quả:** `CHƯA XUẤT` = chưa có ZIP; `LỖI` = đọc dòng `SỬA` và export lại; `OK` = cấu trúc COCO đọc được, chưa phải object/mask đúng. `Polygon/RLE` là **cách lưu mask**, không phải điểm."),
+        md("# 05 · Tự kiểm instance\n\nÁp dụng cho `medium_instance`, `cp1_holes`, `cp2_slice`, `cp5_occlusion`. Save và export **COCO 1.0**. Một object vật lý = một mask. Tự vẽ object Medium đầu trước gợi ý tự động và ghi quy tắc vào `report/individual/03140_NguyenVietTien.md`; gợi ý không thay quyết định của bạn. COCO `annotation_id` không phải mã object bền vững qua hai lần export.\n\n**Đọc kết quả:** `CHƯA XUẤT` = chưa có ZIP; `LỖI` = đọc dòng `SỬA` và export lại; `OK` = cấu trúc COCO đọc được, chưa phải object/mask đúng. `Polygon/RLE` là **cách lưu mask**, không phải điểm."),
         code(SETUP),
         code('''instance_names = [name for name, info in tasks.items() if info["type"] == "instance"]
 for name in instance_names:
@@ -191,10 +191,10 @@ for note in result["warnings"]: print("KIỂM:", note)
         md("## Kiểm bằng mắt trong CVAT trước khi export lại\n\n1. Thing đếm được đã tách từng mask chưa? 2. Stuff có phủ phần thấy được không? 3. Có chồng lấn hoặc vùng chưa phủ ở rìa vật không? 4. Vật bị che: chỉ gán phần nhìn thấy; ghi ca mơ hồ vào report. Công cụ không tự phát hiện đầy đủ các lỗi này."),
     ],
     "nop-bai": [
-        md("# 07 · Kiểm trước khi nộp\n\nBài nộp là **link fork của bạn trên [LMS](https://aithucchien.vinuni.edu.vn)** trước 12:00 trưa hôm sau (UTC+7). Fork cần `report/individual/MSSV_HoTen.md` đã điền và các ZIP CVAT trong `submissions/`. Bạn có thể nộp phần hoàn thành trong 240 phút; task chưa xong ghi rõ trong report. `CHƯA CÓ` nghĩa chưa xuất, không phải lỗi kỹ thuật; `LỖI` cần xem dòng giải thích và sửa trong CVAT; `OK` chỉ xác nhận cấu trúc. Nếu bạn chỉ upload ZIP tạm ở BƯỚC 2, **phải upload ZIP lên fork nữa**."),
+        md("# 07 · Kiểm trước khi nộp\n\nBài nộp là **link fork của bạn trên [LMS](https://aithucchien.vinuni.edu.vn)** trước 12:00 trưa hôm sau (UTC+7). Fork cần `report/individual/03140_NguyenVietTien.md` đã điền và các ZIP CVAT trong `submissions/`. Bạn có thể nộp phần hoàn thành trong 240 phút; task chưa xong ghi rõ trong report. `CHƯA CÓ` nghĩa chưa xuất, không phải lỗi kỹ thuật; `LỖI` cần xem dòng giải thích và sửa trong CVAT; `OK` chỉ xác nhận cấu trúc. Nếu bạn chỉ upload ZIP tạm ở BƯỚC 2, **phải upload ZIP lên fork nữa**."),
         code(SETUP),
         code('''from inspect_submissions import inspect_all
-report_relative = "report/individual/MSSV_HoTen.md"  # đổi thành file đã điền của bạn
+report_relative = "report/individual/03140_NguyenVietTien.md"  # đổi thành file đã điền của bạn
 qc = inspect_all(exports, root)
 for row in qc["tasks"]:
     status = "LỖI" if row["errors"] else ("CHƯA CÓ" if not Path(row["file"]).exists() else "OK")
@@ -204,7 +204,7 @@ print("Lỗi hợp đồng:", qc["error_count"], "· task chưa có ZIP:", qc["m
 print("ZIP tên lạ:", qc["unknown_zips"])
 print("Report có sẵn trong fork:", (root / report_relative).is_file(), "— hãy mở và điền thật trên GitHub.")
 '''),
-        md("## Gói lưu trữ tùy chọn\n\n`report/individual/MSSV_HoTen.md` là mẫu: đổi MSSV và HoTen thành thông tin thật không dấu, điền bài và commit trên GitHub. Cập nhật `report_relative` ở ô kiểm phía trên thành đường dẫn file đã đổi tên. Ô dưới chỉ tạo thêm ZIP lưu trữ trong phiên notebook, **không phải hình thức nộp**. Bài nộp vẫn là link fork có report và các ZIP riêng trong `submissions/` trên [LMS](https://aithucchien.vinuni.edu.vn) trước 12:00 trưa hôm sau (UTC+7). Nếu ô báo lỗi, sửa trong CVAT và export lại."),
+        md("## Gói lưu trữ tùy chọn\n\n`report/individual/03140_NguyenVietTien.md` là mẫu: đổi MSSV và HoTen thành thông tin thật không dấu, điền bài và commit trên GitHub. Cập nhật `report_relative` ở ô kiểm phía trên thành đường dẫn file đã đổi tên. Ô dưới chỉ tạo thêm ZIP lưu trữ trong phiên notebook, **không phải hình thức nộp**. Bài nộp vẫn là link fork có report và các ZIP riêng trong `submissions/` trên [LMS](https://aithucchien.vinuni.edu.vn) trước 12:00 trưa hôm sau (UTC+7). Nếu ô báo lỗi, sửa trong CVAT và export lại."),
         code('''from package_submission import package
 learner_id = ""  # điền mã học viên, ví dụ D3_012; không dùng họ tên đầy đủ
 if not learner_id:
@@ -219,7 +219,7 @@ else:
     except ValueError as exc:
         print("Chưa thể đóng gói:", exc)
 '''),
-        md("## Nếu gặp lỗi, làm gì?\n\n| Bạn thấy | Việc cần làm |\n| --- | --- |\n| `Dán link fork GitHub` | Điền URL gốc fork của mình vào `FORK_URL`, không dán link file hoặc repo đề bài. |\n| `Repository not found` | Fork private không tải được bằng URL public trên Colab; dùng bản tải về/Jupyter local hoặc báo coach. Không tự public repo. Không dán token/mật khẩu vào notebook. |\n| `CHƯA XUẤT` / `CHƯA CÓ` | Đây là trạng thái bình thường trước export. Save trên CVAT, export đúng format và upload ZIP đúng tên. |\n| `LỖI` / ZIP không đọc được | Đọc dòng `SỬA`, sửa trên CVAT rồi Save và export lại; không sửa trực tiếp JSON/PNG trong ZIP. |\n| Colab mất file sau khi ngắt phiên | Runtime Colab là tạm thời; chạy lại từ BƯỚC 0 và upload lại ZIP chưa push. Bản nộp thật phải nằm trên fork. |\n| Cài IPython/mạng lỗi | Báo coach và tiếp tục bằng CVAT + GitHub; notebook là tùy chọn, không phải điều kiện chấm. |\n\n**Trước khi nộp:** mở lại fork trên GitHub, kiểm `report/individual/MSSV_HoTen.md` đã điền và ZIP đã xuất hiện trong `submissions/`, rồi dán link fork lên [LMS](https://aithucchien.vinuni.edu.vn). Giữ ZIP gốc đến khi nhận phản hồi. Điểm 100 chỉ do người chấm đối chiếu reference; QC cấu trúc hoặc hai mask giống nhau không phải điểm."),
+        md("## Nếu gặp lỗi, làm gì?\n\n| Bạn thấy | Việc cần làm |\n| --- | --- |\n| `Dán link fork GitHub` | Điền URL gốc fork của mình vào `FORK_URL`, không dán link file hoặc repo đề bài. |\n| `Repository not found` | Fork private không tải được bằng URL public trên Colab; dùng bản tải về/Jupyter local hoặc báo coach. Không tự public repo. Không dán token/mật khẩu vào notebook. |\n| `CHƯA XUẤT` / `CHƯA CÓ` | Đây là trạng thái bình thường trước export. Save trên CVAT, export đúng format và upload ZIP đúng tên. |\n| `LỖI` / ZIP không đọc được | Đọc dòng `SỬA`, sửa trên CVAT rồi Save và export lại; không sửa trực tiếp JSON/PNG trong ZIP. |\n| Colab mất file sau khi ngắt phiên | Runtime Colab là tạm thời; chạy lại từ BƯỚC 0 và upload lại ZIP chưa push. Bản nộp thật phải nằm trên fork. |\n| Cài IPython/mạng lỗi | Báo coach và tiếp tục bằng CVAT + GitHub; notebook là tùy chọn, không phải điều kiện chấm. |\n\n**Trước khi nộp:** mở lại fork trên GitHub, kiểm `report/individual/03140_NguyenVietTien.md` đã điền và ZIP đã xuất hiện trong `submissions/`, rồi dán link fork lên [LMS](https://aithucchien.vinuni.edu.vn). Giữ ZIP gốc đến khi nhận phản hồi. Điểm 100 chỉ do người chấm đối chiếu reference; QC cấu trúc hoặc hai mask giống nhau không phải điểm."),
     ],
 }
 

@@ -7,7 +7,7 @@
 
 **Dành cho học viên · 240 phút thực hành trên lớp · điểm ghi nhận tối đa 100.** Repo đề bài được chia sẻ cho lớp; mỗi học viên **fork repo này**, làm bài trong fork của mình, push kết quả rồi nộp link fork trên [LMS](https://aithucchien.vinuni.edu.vn) trước 12:00 trưa ngày hôm sau buổi lab (UTC+7).
 
-Bạn sẽ tự tạo mask cho ảnh trong repo, kiểm lại theo quy tắc, sửa một lỗi và giải thích quyết định của mình. Bài nộp gồm **ZIP export từ CVAT cho các task đã làm và một `report/individual/MSSV_HoTen.md`** trong fork của bạn. Có thể hoàn thành toàn bộ mà không cần lập trình, Jupyter hay SAM. [Hướng dẫn trực quan có ảnh chụp CVAT](lab-guide.html) dành cho người mới; README này là lộ trình đầy đủ để tra cứu trong lúc làm. Nếu xem trên GitHub không mở được HTML, tải fork về và mở file đó trong Chrome/Edge.
+Bạn sẽ tự tạo mask cho ảnh trong repo, kiểm lại theo quy tắc, sửa một lỗi và giải thích quyết định của mình. Bài nộp gồm **ZIP export từ CVAT cho các task đã làm và một `report/individual/03140_NguyenVietTien.md`** trong fork của bạn. Có thể hoàn thành toàn bộ mà không cần lập trình, Jupyter hay SAM. [Hướng dẫn trực quan có ảnh chụp CVAT](lab-guide.html) dành cho người mới; README này là lộ trình đầy đủ để tra cứu trong lúc làm. Nếu xem trên GitHub không mở được HTML, tải fork về và mở file đó trong Chrome/Edge.
 
 ## Bắt đầu trong 5 phút
 
@@ -15,7 +15,7 @@ Bạn sẽ tự tạo mask cho ảnh trong repo, kiểm lại theo quy tắc, s�
 2. Chạy **CVAT local**.
 3. Đọc [phiếu quy tắc](guideline-mini-sheet.md). Tạo task đầu tiên tên `easy_semantic`, tải đúng ba ảnh trong [`data/tiers/easy_semantic/images/`](data/tiers/easy_semantic/images/). Nếu dùng ô **Labels → Raw** của CVAT, sao chép **toàn bộ** [`cvat-labels.json`](data/tiers/easy_semantic/cvat-labels.json) của task rồi dán vào đó. Nếu thêm từng label bằng **Constructor**, đọc tên trong [`classes.json`](data/tiers/easy_semantic/classes.json).
 4. Vẽ mask, kiểm class và vùng, bấm **Save**, xuất **Segmentation mask 1.1**, lưu thành `easy_semantic.zip`. Các task tiếp theo có bộ ảnh và `classes.json` riêng.
-5. Trước khi nộp, mở [`report/individual/MSSV_HoTen.md`](report/individual/MSSV_HoTen.md) đã có sẵn trong thư mục report/individual/, đổi MSSV và HoTen thành thông tin thật không dấu rồi điền bài; [mẫu giải thích chi tiết](reports/REPORT_TEMPLATE.md) giúp bạn hiểu từng ô. Push/upload report cùng các ZIP lên fork rồi nộp link fork trên [LMS](https://aithucchien.vinuni.edu.vn). Nếu không kịp task nào, ghi phần đã làm và phần còn thiếu; không tạo export rỗng.
+5. Trước khi nộp, mở [`report/individual/03140_NguyenVietTien.md`](report/individual/03140_NguyenVietTien.md) đã có sẵn trong thư mục report/individual/, đổi MSSV và HoTen thành thông tin thật không dấu rồi điền bài; [mẫu giải thích chi tiết](reports/REPORT_TEMPLATE.md) giúp bạn hiểu từng ô. Push/upload report cùng các ZIP lên fork rồi nộp link fork trên [LMS](https://aithucchien.vinuni.edu.vn). Nếu không kịp task nào, ghi phần đã làm và phần còn thiếu; không tạo export rỗng.
 
 > **Ảnh trong screenshot CVAT chỉ để tìm nút, không phải ảnh chấm.** Ảnh chấm nằm trong `data/` của repo này. Tên class phải giống từng chữ trong `classes.json` của chính task đang làm.
 
@@ -63,7 +63,7 @@ Checkpoint có **class list riêng**. Ví dụ `cp3_thin` có `pole`, `traffic s
 | 120–175 | Hard panoptic: stuff + từng thing trên hai ảnh, QC/export | `hard_panoptic.zip` |
 | 175–185 | Nghỉ; nhận reference ba tier từ phút 180 theo hướng dẫn lớp | Không đưa đáp án lên fork |
 | 185–215 | Sáu checkpoint; người xong sớm chạy scorer ba tier | ZIP trạm đã làm; kết quả tự đánh giá nếu có |
-| 215–235 | Kiểm file, sửa và export lại nếu cần; điền report | `report/individual/MSSV_HoTen.md`: lỗi, hành động, ba ca cân nhắc |
+| 215–235 | Kiểm file, sửa và export lại nếu cần; điền report | `report/individual/03140_NguyenVietTien.md`: lỗi, hành động, ba ca cân nhắc |
 | 235–240 | Save lần cuối, kiểm danh sách ZIP/report, ghi lỗi cần báo coach | Bài sẵn để đưa lên fork |
 
 ## CVAT local: làm từng bước, không cần code
@@ -94,7 +94,7 @@ Người mới có ảnh hướng dẫn, checklist và đường báo lỗi; ng�
 
 Checklist chung: **đúng task/ảnh → đúng loại segmentation/class → đủ vùng/vật → biên theo phần nhìn thấy → không gộp/tách nhầm → Save → ZIP đúng format và tên**. Nếu ca không chắc, ghi vị trí, hai cách hiểu, quy tắc/bằng chứng và quyết định hoặc câu hỏi cho coach. Đừng sửa JSON/PNG trong ZIP để làm cho kiểm tra “xanh”.
 
-Mở [`report/individual/MSSV_HoTen.md`](report/individual/MSSV_HoTen.md) trong thư mục report/individual/ rồi điền; [mẫu có ví dụ](reports/REPORT_TEMPLATE.md) giải thích từng mục:
+Mở [`report/individual/03140_NguyenVietTien.md`](report/individual/03140_NguyenVietTien.md) trong thư mục report/individual/ rồi điền; [mẫu có ví dụ](reports/REPORT_TEMPLATE.md) giải thích từng mục:
 
 1. Mã học viên, các task và ảnh đã hoàn thành, ZIP tương ứng; task chưa kịp ghi rõ, **không tự điền điểm**.
 2. Object Medium đầu tiên tự làm: ảnh, vị trí, class và quy tắc chọn biên. Nếu dùng gợi ý sau đó, ghi một quyết định sửa/giữ và lý do; nếu không dùng, vẫn giải thích quyết định gán nhãn.
@@ -115,7 +115,7 @@ Lệnh không cần thư viện ngoài; nó kiểm tên ảnh, class, cấu trú
 
 ## Fork → làm bài → push → nộp link trước 12:00 trưa hôm sau (UTC+7)
 
-Từ repo đề bài được chia sẻ cho lớp, bấm **Fork** để có bản trên tài khoản GitHub của bạn. Làm bài với bộ ảnh trong fork; khi xuất từ CVAT, đưa `report/individual/MSSV_HoTen.md` vào thư mục report/individual/ và các ZIP vào `submissions/` (ví dụ `submissions/easy_semantic.zip`, `submissions/cp2_slice.zip`). Dùng **Add file → Upload files** trên GitHub hoặc Git để push thay đổi, mở lại fork để chắc file đã hiện, rồi **dán link fork trên [LMS](https://aithucchien.vinuni.edu.vn) trước 12:00 trưa ngày hôm sau buổi lab (UTC+7)**. Không cần chạy Git bằng lệnh nếu bạn dùng nút Upload files. Nếu muốn có thêm một gói lưu/chuyển, lệnh sau là tùy chọn:
+Từ repo đề bài được chia sẻ cho lớp, bấm **Fork** để có bản trên tài khoản GitHub của bạn. Làm bài với bộ ảnh trong fork; khi xuất từ CVAT, đưa `report/individual/03140_NguyenVietTien.md` vào thư mục report/individual/ và các ZIP vào `submissions/` (ví dụ `submissions/easy_semantic.zip`, `submissions/cp2_slice.zip`). Dùng **Add file → Upload files** trên GitHub hoặc Git để push thay đổi, mở lại fork để chắc file đã hiện, rồi **dán link fork trên [LMS](https://aithucchien.vinuni.edu.vn) trước 12:00 trưa ngày hôm sau buổi lab (UTC+7)**. Không cần chạy Git bằng lệnh nếu bạn dùng nút Upload files. Nếu muốn có thêm một gói lưu/chuyển, lệnh sau là tùy chọn:
 
 ```bash
 python3 scripts/package_submission.py --learner-id D3_012 --report report/individual/20260001_NguyenVanAn.md
@@ -150,6 +150,6 @@ Các lệnh chấm cần reference được giữ riêng và ba thư viện tron
 
 Repo đề bài: `K5-L2-Day03-Image-Segmentation`. Repo bài cá nhân: `K5-L2-DAY03-HoVaTen-MSSV-Image-Segmentation`.
 
-Đọc [SUBMISSION.md](SUBMISSION.md), [RULES.md](RULES.md), [CHECKPOINTS.md](CHECKPOINTS.md) và [RUBRIC.md](RUBRIC.md). Báo cáo theo mẫu `report/individual/MSSV_HoTen.md`; đổi MSSV và HoTen thành thông tin thật không dấu. ZIP task đặt trong `submissions/`.
+Đọc [SUBMISSION.md](SUBMISSION.md), [RULES.md](RULES.md), [CHECKPOINTS.md](CHECKPOINTS.md) và [RUBRIC.md](RUBRIC.md). Báo cáo theo mẫu `report/individual/03140_NguyenVietTien.md`; đổi MSSV và HoTen thành thông tin thật không dấu. ZIP task đặt trong `submissions/`.
 
 **Deadline: 12:00 trưa ngày hôm sau buổi lab, UTC+7.** Buổi 11/11/2026 hạn 12/11/2026 lúc 12:00.

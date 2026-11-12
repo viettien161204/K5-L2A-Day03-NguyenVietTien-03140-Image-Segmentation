@@ -185,7 +185,7 @@ def inspect_task(name: str, path: Path, root: Path = ROOT) -> dict:
     images, classes = expected_for(name, info, root)
     result = {"task": name, "type": info["type"], "file": str(path), "errors": [], "warnings": [], "details": {}}
     if not path.exists():
-        result["warnings"].append("chưa có ZIP; ghi trong report/individual/MSSV_HoTen.md nếu chưa kịp")
+        result["warnings"].append("chưa có ZIP; ghi trong report/individual/03140_NguyenVietTien.md nếu chưa kịp")
         return result
     try:
         members = _members(path)

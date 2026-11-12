@@ -18,7 +18,7 @@ submissions/cp5_occlusion.zip
 submissions/cp6_coverage.zip
 ```
 
-Đổi tên mẫu `report/individual/MSSV_HoTen.md` theo MSSV và họ tên thật không dấu. Báo cáo và ZIP chứa phần đã làm; phần thiếu phải ghi rõ. Chưa làm task thì không tạo ZIP rỗng. Hướng dẫn format/export: [docs/SUBMISSION.md](docs/SUBMISSION.md).
+Đổi tên mẫu `report/individual/03140_NguyenVietTien.md` theo MSSV và họ tên thật không dấu. Báo cáo và ZIP chứa phần đã làm; phần thiếu phải ghi rõ. Chưa làm task thì không tạo ZIP rỗng. Hướng dẫn format/export: [docs/SUBMISSION.md](docs/SUBMISSION.md).
 
 ## Deadline và nơi nộp
 

@@ -1,4 +1,4 @@
-"""Create one auditable Day 3 hand-in ZIP from report/individual/MSSV_HoTen.md and CVAT exports."""
+"""Create one auditable Day 3 hand-in ZIP from report/individual/03140_NguyenVietTien.md and CVAT exports."""
 
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ def package(directory: Path, report_path: Path, output: Path, learner_id: str) -
     if not re.fullmatch(r"[A-Za-z0-9_-]{1,40}", learner_id):
         raise ValueError("mã học viên chỉ gồm chữ, số, _ hoặc -, dài 1–40 ký tự")
     if not report_path.is_file():
-        raise ValueError(f"chưa có {report_path}; sao chép reports/REPORT_TEMPLATE.md thành report/individual/MSSV_HoTen.md và điền")
+        raise ValueError(f"chưa có {report_path}; sao chép reports/REPORT_TEMPLATE.md thành report/individual/03140_NguyenVietTien.md và điền")
     if output.resolve() == report_path.resolve() or output.resolve().parent == directory.resolve():
         raise ValueError("đặt gói cuối ngoài thư mục ZIP export để không tự đóng gói chính nó")
     qc = inspect_all(directory)
@@ -66,7 +66,7 @@ def main() -> int:
     print("Đã tạo", output)
     print("Task có export:", ", ".join(result["tasks_present"]))
     if result["tasks_missing"]:
-        print("Task chưa có export (cần giải thích trong report/individual/MSSV_HoTen.md):", ", ".join(result["tasks_missing"]))
+        print("Task chưa có export (cần giải thích trong report/individual/03140_NguyenVietTien.md):", ", ".join(result["tasks_missing"]))
     print("Đây là kiểm cấu trúc, không phải điểm hay xác nhận mask đúng.")
     return 0
 

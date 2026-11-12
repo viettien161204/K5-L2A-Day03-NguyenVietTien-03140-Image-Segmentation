@@ -5,7 +5,7 @@ Phần điểm tự đánh giá **chỉ mở khi người phụ trách phát gro
 ## Cách dễ nhất — xem điểm ngay trên fork
 
 1. Trên **fork của bạn**, mở tab **Actions** và bật workflows nếu GitHub hỏi xác nhận. GitHub không tự bật Actions trên fork mới. Không cần tạo secret, token hoặc sửa file workflow.
-2. Save/export từ CVAT rồi upload ZIP đúng tên vào `submissions/` trên fork; bấm **Commit changes**. Workflow **Day 3 self-check** sẽ tự chạy mỗi khi ZIP hoặc `report/individual/MSSV_HoTen.md` được push. Mở **Actions → Day 3 self-check → lần chạy mới nhất → Summary**. Nếu chưa thấy lần chạy, kiểm Actions đã bật; sau đó chọn **Run workflow** để chạy thủ công.
+2. Save/export từ CVAT rồi upload ZIP đúng tên vào `submissions/` trên fork; bấm **Commit changes**. Workflow **Day 3 self-check** sẽ tự chạy mỗi khi ZIP hoặc `../report/individual/03140_NguyenVietTien.md` được push. Mở **Actions → Day 3 self-check → lần chạy mới nhất → Summary**. Nếu chưa thấy lần chạy, kiểm Actions đã bật; sau đó chọn **Run workflow** để chạy thủ công.
 3. Trước lúc gói đáp án chính thức xuất hiện, Summary chỉ kiểm cấu trúc ZIP và ghi “chưa có ground truth”; **không cho điểm 0**. Sau khi người phụ trách công bố gói đáp án trong giờ cuối, bấm **Run workflow** hoặc push ZIP mới. Summary sẽ hiện scorecard Easy + Medium + Hard tối đa **82**, task chưa có ZIP hiện `missing`/0. Sáu checkpoint vẫn theo rubric nhưng không được tự chấm khi chưa có reference.
 4. Nếu kết quả chưa hợp lý, mở đúng task trong CVAT, xem mask/class/object, sửa → Save → export lại → upload ZIP mới cùng tên vào fork. Bạn có thể lặp lại để xem phản hồi mới; **lần chạy cũ không phải bài nộp cuối**. Nếu ZIP lỗi, xem dòng `LỖI` trong Summary; nếu workflow đỏ, mở log bước lỗi và báo coach. Không sửa JSON/PNG trong ZIP hoặc sửa workflow để “đạt điểm”.
 
@@ -54,7 +54,7 @@ python3 scoring/score.py medium_instance submissions/medium_instance.zip --group
 python3 scoring/score.py hard_panoptic submissions/hard_panoptic.zip --group tiers
 ```
 
-Easy in `per-class IoU`: class nào thấp thì nhìn lại đúng ranh/vùng đó trong CVAT. Medium xem `mean matched IoU`, `R@0.5`, số `FP/FN` để tìm mask ăn nền, vật thừa hoặc bỏ sót. Hard xem `PQ`, `SQ`, `RQ` để phân biệt vấn đề biên với vật/vùng thiếu-thừa. Điểm cao là mức khớp với **reference được phát**, không phải bằng chứng bạn đã tự làm trước khi xem nó. Nếu sửa, **sửa trong CVAT → Save → export ZIP mới → chạy lại**; không chỉnh JSON/PNG trong ZIP hay chép đáp án. Ghi một lỗi và hành động sửa có thật vào mục 3 của `report/individual/MSSV_HoTen.md`.
+Easy in `per-class IoU`: class nào thấp thì nhìn lại đúng ranh/vùng đó trong CVAT. Medium xem `mean matched IoU`, `R@0.5`, số `FP/FN` để tìm mask ăn nền, vật thừa hoặc bỏ sót. Hard xem `PQ`, `SQ`, `RQ` để phân biệt vấn đề biên với vật/vùng thiếu-thừa. Điểm cao là mức khớp với **reference được phát**, không phải bằng chứng bạn đã tự làm trước khi xem nó. Nếu sửa, **sửa trong CVAT → Save → export ZIP mới → chạy lại**; không chỉnh JSON/PNG trong ZIP hay chép đáp án. Ghi một lỗi và hành động sửa có thật vào mục 3 của `../report/individual/03140_NguyenVietTien.md`.
 
 ### Bước 4 — gộp riêng ba tier
 
@@ -72,4 +72,4 @@ Nếu script báo `Protected reference missing`, kiểm đúng cấu trúc ở B
 
 Bonus chưa được giao trong Day03; không tự cộng điểm hay xếp top 3. Xem [RUBRIC](../RUBRIC.md).
 
-Bạn vẫn nộp **link fork** cùng `report/individual/MSSV_HoTen.md` và ZIP của task đã làm trên [LMS](https://aithucchien.vinuni.edu.vn) trong hạn lớp thông báo. Có thể ghi kết quả tự đánh giá trong report và đính kèm `reports/tiers/SCORECARD.md` nếu muốn, nhưng scorecard **không thay ZIP**. Không đưa đáp án vào repo công khai. Công cụ chấm chính thức sau hạn nộp vẫn đối chiếu bản đã nộp theo quy trình lớp.
+Bạn vẫn nộp **link fork** cùng `../report/individual/03140_NguyenVietTien.md` và ZIP của task đã làm trên [LMS](https://aithucchien.vinuni.edu.vn) trong hạn lớp thông báo. Có thể ghi kết quả tự đánh giá trong report và đính kèm `reports/tiers/SCORECARD.md` nếu muốn, nhưng scorecard **không thay ZIP**. Không đưa đáp án vào repo công khai. Công cụ chấm chính thức sau hạn nộp vẫn đối chiếu bản đã nộp theo quy trình lớp.

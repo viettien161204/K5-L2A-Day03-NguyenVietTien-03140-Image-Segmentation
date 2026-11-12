@@ -27,4 +27,4 @@ Tên lớp phải giống từng chữ trong `classes.json` của task. `traffic
 4. Mask có tràn sang nền/bóng hoặc bỏ sót vùng rõ ràng không?
 5. Đã Save và export đúng format của task chưa?
 
-Khi không chắc, ghi ảnh/vị trí, dấu hiệu nhìn thấy, quy tắc đã dùng và điều cần hỏi trong `report/individual/MSSV_HoTen.md`. Không ép đoán cho đủ coverage.
+Khi không chắc, ghi ảnh/vị trí, dấu hiệu nhìn thấy, quy tắc đã dùng và điều cần hỏi trong `report/individual/03140_NguyenVietTien.md`. Không ép đoán cho đủ coverage.

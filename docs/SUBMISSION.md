@@ -16,7 +16,7 @@ Repo đề bài được chia sẻ cho lớp. Bạn **fork về tài khoản Git
 
 ## 2. Điền một report
 
-Mở [`report/individual/MSSV_HoTen.md`](../report/individual/MSSV_HoTen.md) đã có sẵn trong thư mục report/individual/ và đổi tên file theo MSSV, họ tên thật không dấu (ví dụ `20260001_NguyenVanAn.md`); điền mã học viên, task hoàn thành, một quyết định tự vẽ trước gợi ý, một lỗi đã sửa và ba ca cân nhắc. Nếu cần hiểu cách điền, xem [mẫu có giải thích](../reports/REPORT_TEMPLATE.md). Không tự điền điểm. Nếu export thất bại, ghi tên task, trạng thái đã Save trên CVAT và báo coach.
+Mở [`../report/individual/03140_NguyenVietTien.md`](../report/individual/03140_NguyenVietTien.md) đã có sẵn trong thư mục report/individual/ và đổi tên file theo MSSV, họ tên thật không dấu (ví dụ `20260001_NguyenVanAn.md`); điền mã học viên, task hoàn thành, một quyết định tự vẽ trước gợi ý, một lỗi đã sửa và ba ca cân nhắc. Nếu cần hiểu cách điền, xem [mẫu có giải thích](../reports/REPORT_TEMPLATE.md). Không tự điền điểm. Nếu export thất bại, ghi tên task, trạng thái đã Save trên CVAT và báo coach.
 
 ## 3. Tự kiểm tùy chọn
 
@@ -32,9 +32,9 @@ Khi push ZIP lên fork, **Day 3 self-check** trong tab Actions tự kiểm cấu
 
 ## 4. Đưa bài lên fork và nộp link
 
-Không cần dòng lệnh Git: mở `report/individual/MSSV_HoTen.md` ngay trong fork → bấm biểu tượng bút chì **Edit** → đổi tên file theo MSSV và họ tên thật không dấu → điền bài rồi **Commit changes**. Mở `submissions/` → **Add file → Upload files** → upload từng ZIP đúng tên và Commit. Mở lại fork, kiểm report đã điền và các ZIP đã hiện, rồi dán **URL của fork cá nhân** vào bài nộp Day 3 trên [LMS](https://aithucchien.vinuni.edu.vn). Đừng dán URL repo đề bài của lớp. Nếu dùng Git trên máy, commit và push các file tương tự; kết quả trên fork phải giống nhau.
+Không cần dòng lệnh Git: mở `../report/individual/03140_NguyenVietTien.md` ngay trong fork → bấm biểu tượng bút chì **Edit** → đổi tên file theo MSSV và họ tên thật không dấu → điền bài rồi **Commit changes**. Mở `submissions/` → **Add file → Upload files** → upload từng ZIP đúng tên và Commit. Mở lại fork, kiểm report đã điền và các ZIP đã hiện, rồi dán **URL của fork cá nhân** vào bài nộp Day 3 trên [LMS](https://aithucchien.vinuni.edu.vn). Đừng dán URL repo đề bài của lớp. Nếu dùng Git trên máy, commit và push các file tương tự; kết quả trên fork phải giống nhau.
 
-Lệnh đóng thêm một ZIP duy nhất dưới đây là **tùy chọn để lưu/chuyển**, không thay cho `report/individual/MSSV_HoTen.md` và các ZIP riêng trên fork:
+Lệnh đóng thêm một ZIP duy nhất dưới đây là **tùy chọn để lưu/chuyển**, không thay cho `../report/individual/03140_NguyenVietTien.md` và các ZIP riêng trên fork:
 
 ```bash
 python3 scripts/package_submission.py --learner-id D3_012 --report report/individual/20260001_NguyenVanAn.md
